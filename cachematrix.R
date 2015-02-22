@@ -1,15 +1,29 @@
-## Put comments here that give an overall description of what your
-## functions do
+# ASSIGNMENT 2               FECHA: FEBRERO 2015     #
+# COURSERA-JHU                                       #
+# COURSE: R PROGRAMMING      ONLINE                  #
+#                                                    #
+######################################################
 
-## Write a short comment describing this function
+cacheMatrix <- matrix(1:4,2,2)
+                  m <- NULL
+                  set <-cacheMatrix 
+ 
+  get <- matrix(1:4,2,2) 
+         setinv <- solve(cacheMatrix) 
+         m <<- setinv
+         getinv <- m
 
-makeCacheMatrix <- function(x = matrix()) {
+  list(set = set, get = get,
+             setinv = setinv, 
+             getinv = getinv)
 
-}
+   cacheinv<-get 
+                 m<-getinv       
+                 if(!is.null(m))
+                 message("GETTING CACHED INVERSE MATRIX")
+                 m <- setinv
 
+   print(cacheinv)
 
-## Write a short comment describing this function
+   print(m)
 
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-}
